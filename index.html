@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Carrito de Compras</h1>
+
+    <div id="carrito-icono" onclick="toggleCarrito()">
+      🛒 <span id="contador">0</span>
+    </div>
+
+    <h2>Productos Disponibles</h2>
+    <div id="productos">
+      <div class="producto">
+        <img
+          src="https://www.unidiversidad.com.ar/cache/pc_1000_1100.jpg"
+          alt="PC"
+          class="producto-img"
+        />
+        <span>Computadora de Escritorio - $20,000</span>
+        <button
+          onclick="agregarAlCarrito('PC', 20000, 'https://www.unidiversidad.com.ar/cache/pc_1000_1100.jpg')"
+        >
+          Agregar
+        </button>
+      </div>
+      <div class="producto">
+        <img
+          src="https://sp.yimg.com/ib/th?id=OPHS.sJiz%2b5edCwg2Cg474C474&o=5&pid=21.1&w=160&h=105"
+          alt="Laptop"
+          class="producto-img"
+        />
+        <span>Laptop - $12,000</span>
+        <button
+          onclick="agregarAlCarrito('Laptop', 12000, 'https://sp.yimg.com/ib/th?id=OPHS.sJiz%2b5edCwg2Cg474C474&o=5&pid=21.1&w=160&h=105')"
+        >
+          Agregar
+        </button>
+      </div>
+      <div class="producto">
+        <img
+          src="https://up.yimg.com/ib/th?id=OIP.0-KIptBohQtxzXbKAKqUFAHaFM&pid=Api&rs=1&c=1&qlt=95&w=158&h=111"
+          alt="Mouse"
+          class="producto-img"
+        />
+        <span>Mouse - $400</span>
+        <button
+          onclick="agregarAlCarrito('Mouse', 400, 'https://up.yimg.com/ib/th?id=OIP.0-KIptBohQtxzXbKAKqUFAHaFM&pid=Api&rs=1&c=1&qlt=95&w=158&h=111')"
+        >
+          Agregar
+        </button>
+      </div>
+    </div>
+
+    <div id="carrito-contenedor" class="oculto">
+      <h2>Carrito de Compras</h2>
+      <div id="carrito-lista"></div>
+      <h3>Total: $<span id="total">0</span></h3>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
